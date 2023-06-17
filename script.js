@@ -41,6 +41,7 @@ function displayEmployees() {
     const li = document.createElement('div');
     // const li = document.createElement('ul');
     li.setAttribute('id','employee-entry');
+    li.classList.add('employee-entry');
     const div1 = document.createElement('div');
     div1.classList.add('div-for-each-part');
     const p1 = document.createElement('p');

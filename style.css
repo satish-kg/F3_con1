@@ -6,6 +6,10 @@
   .error {
     color: red;
   }
+  p{
+    display: flex;
+    flex-direction: row;
+  }
   form{
     /* display: flex;
     flex-direction: row; */
@@ -13,10 +17,12 @@
   .card-container{
     display: flex;
     flex-direction: row;
+    /* border: 10px solid aqua; */
   }
   .card{
     width: 33%;
     /* border: 2px solid red; */
+    
   }
   input{
     width: 90%;
@@ -25,17 +31,20 @@
   }
   #add-button{
     border: none;
+    /* border: 2px solid yellow; */
     background-color: white;
     text-decoration: none;
     padding : 0.7% 2%;
     cursor: pointer;
+    margin-top: 0.5%;
   }
   #employeeList{
     /* width: 45%; */
   }
   .button-div{
     /* border: 2px solid lightblue; */
-    padding-top: 2.5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
   }
   #employee-entry{
     margin: 0.5%;
@@ -48,8 +57,18 @@
     /* align-items: flex-start; */
     gap: 5%;
   }
+  
+  @media screen and (max-width : 1080px) {
+    #employee-entry{
+      width: 70%;
+    }
+    .button-div{
+      margin-top: 4%;
+    }
+
+  }
   .div-for-each-part{
-    /* border: 3px solid orangered; */
+    /* border: 3px solid orangered;   */
     /* margin-left: 2%; */
   }
   #li-box{
