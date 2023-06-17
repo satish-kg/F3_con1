@@ -29,9 +29,42 @@
     text-decoration: none;
     padding : 0.7% 2%;
   }
+  #employeeList{
+    /* width: 45%; */
+  }
   .button-div{
     /* border: 2px solid lightblue; */
     padding-top: 2.5%;
+  }
+  #employee-entry{
+    margin: 0.5%;
+    border: 2px solid grey;
+    border-radius: 15px;
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-around;
+    width: 40%;
+    /* align-items: flex-start; */
+    gap: 5%;
+  }
+  .div-for-each-part{
+    /* border: 3px solid orangered; */
+    /* margin-left: 2%; */
+  }
+  #li-box{
+    /* border: 2px solid red; */
+    display: flex;
+  }
+  #li{
+    border: 1px solid greenyellow;
+  }
+  #delete-button{
+    align-self: center;
+    border: none;
+    margin-left: 1%;
+    text-decoration: none;
+    padding : 0.7% 2%;
+    border-radius: 20px;
   }
   /* .instruction-div{
     display: flex;

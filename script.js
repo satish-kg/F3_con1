@@ -8,7 +8,7 @@ document.getElementById('employeeForm').addEventListener('submit', function(even
   const age = document.getElementById('age').value;
 
   if (!name || !profession || !age) {
-    showError('Please fill in all fields.');
+    showError('Error : Please make sure all fields fields are filled before adding in an employee !');
     return;
   }
 
@@ -21,7 +21,7 @@ document.getElementById('employeeForm').addEventListener('submit', function(even
 
   employees.push(employee);
 
-  showSuccess('Employee added successfully.');
+  showSuccess('Success : Employee Added!');
   displayEmployees();
 
   document.getElementById('employeeForm').reset();
@@ -36,18 +36,52 @@ function displayEmployees() {
   employeeList.innerHTML = '';
 
   employees.forEach(function(employee) {
-    const li = document.createElement('li');
-    li.innerHTML = `ID: ${employee.id}, Name: ${employee.name}, Profession: ${employee.profession}, Age: ${employee.age}`;
+    const newDiv =  document.createElement('div');
+    newDiv.setAttribute('id', 'li-box');
+    const li = document.createElement('div');
+    // const li = document.createElement('ul');
+    li.setAttribute('id','employee-entry');
+    const div1 = document.createElement('div');
+    div1.classList.add('div-for-each-part');
+    const p1 = document.createElement('p');
+    p1.setAttribute('id', 'p1');
+    p1.innerHTML = `${employee.id}. `;
+    div1.appendChild(p1);
+    const div2 = document.createElement('div');
+    div2.classList.add('div-for-each-part');
+    const p2 = document.createElement('p');
+    p2.setAttribute('id', 'p2');
+    p2.innerHTML = ` Name : ${employee.name}`;
+    div2.appendChild(p2);
+    const div3 = document.createElement('div');
+    div3.classList.add('div-for-each-part');
+    const p3 = document.createElement('p');
+    p3.setAttribute('id', 'p3');
+    p3.innerHTML = ` Profession : ${employee.profession}`;
+    div3.appendChild(p3);
+    const div4 = document.createElement('div');
+    div4.classList.add('div-for-each-part');
+    const p4 = document.createElement('p');
+    p4.setAttribute('id', 'p4');
+    p4.innerHTML = ` Age : ${employee.age}`;
+    div4.appendChild(p4);
+    li.appendChild(div1);
+    li.appendChild(div2);
+    li.appendChild(div3);
+    li.appendChild(div4);
+    // li.innerHTML = `${employee.id}`+`    `+`Name: ${employee.name}`+`    `+`Profession: ${employee.profession}`+`    `+`Age: ${employee.age}`;
     
     const deleteButton = document.createElement('button');
+    deleteButton.setAttribute('id', 'delete-button')
     deleteButton.innerHTML = 'Delete';
     deleteButton.addEventListener('click', function() {
       deleteEmployee(employee.id);
       li.remove();
     });
-    li.appendChild(deleteButton);
-
-    employeeList.appendChild(li);
+    // li.appendChild(deleteButton);
+    newDiv.appendChild(li);
+    newDiv.appendChild(deleteButton);
+    employeeList.appendChild(newDiv);
   });
 }
 
