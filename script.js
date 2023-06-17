@@ -108,10 +108,10 @@ function showError(message) {
   errorMessage.innerHTML = message;
   errorMessage.classList.add('error');
 
-  setTimeout(function() {
-    errorMessage.innerHTML = '';
-    errorMessage.classList.remove('error');
-  }, 3000);
+ setTimeout(function() {
+   errorMessage.innerHTML = '';
+   errorMessage.classList.remove('error');
+ }, 3000);
 }
 
 displayEmployees();
