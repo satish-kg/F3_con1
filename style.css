@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap");
 .success {
     color: green;
   }
@@ -5,4 +6,70 @@
   .error {
     color: red;
   }
-  
+  form{
+    /* display: flex;
+    flex-direction: row; */
+  }
+  .card-container{
+    display: flex;
+    flex-direction: row;
+  }
+  .card{
+    width: 33%;
+    /* border: 2px solid red; */
+  }
+  input{
+    width: 90%;
+    color: white;
+    height: 50%;
+  }
+  #add-button{
+    border: none;
+    background-color: white;
+    text-decoration: none;
+    padding : 0.7% 2%;
+  }
+  .button-div{
+    /* border: 2px solid lightblue; */
+    padding-top: 2.5%;
+  }
+  /* .instruction-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 30%;
+  }
+  .input-div{
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    gap: 80%;
+  } */
+  h2{
+    display: flex;
+    flex-direction: row;
+  }
+  body{
+    background-color: black;
+    color: white;
+    font-family: "Inter", sans-serif;
+  }
+  .main-container{
+    margin: 2%;
+    /* outline: auto; */
+  }
+  #name{
+    background-color: black;
+    border: 2px solid grey;
+    border-radius: 4px;
+  }
+  #age{
+    background-color: black;
+    border: 2px solid grey;
+    border-radius: 4px;
+  }
+  #profession{
+    background-color: black;
+    border: 2px solid grey;
+    border-radius: 4px;
+  }
