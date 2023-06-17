@@ -76,7 +76,7 @@ function displayEmployees() {
     deleteButton.innerHTML = 'Delete';
     deleteButton.addEventListener('click', function() {
       deleteEmployee(employee.id);
-      li.remove();
+      newDiv.remove();
     });
     // li.appendChild(deleteButton);
     newDiv.appendChild(li);
