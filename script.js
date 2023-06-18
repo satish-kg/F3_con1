@@ -91,6 +91,9 @@ function deleteEmployee(id) {
   employees = employees.filter(function(employee) {
     return employee.id !== id;
   });
+  for(let i = 0; i < employees.length; i++){
+      employees[i].id = i+1;
+  }
 }
 
 function showSuccess(message) {
